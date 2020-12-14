@@ -1,11 +1,9 @@
 class FoodService
 
   def self.food(ingredient)
-    binding.pry
     response = conn.get('v1/foods/search') do |req|
       req.params[:query] = ingredient
     end
-    binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
