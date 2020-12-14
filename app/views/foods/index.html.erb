@@ -1,19 +1,22 @@
 <section id='counter'>
-
+  <p>There are <%= @foods.count %> results</p>
 </section>
-
-<section id='GTIN-code'>
-
-</section>
-
-<section id='description'>
-
-</section>
-
-<section id='brand'>
-
-</section>
-
-<section id='ingredients'>
-
-</section>
+<br>
+<% @foods.each do |food| %>
+<br>
+  <section id='GTIN-code'>
+    gtin/ upc: <%= food.code %>
+  </section>
+<br>
+  <section id='ingredients'>
+    Ingredients: <%= food.ingredients %>
+  </section>
+<br>
+  <section id='description'>
+    Description: <%= food.description %>
+  </section>
+<br>
+  <section id='brand'>
+    From <%= food.brand %>
+  </section>
+<% end %>
