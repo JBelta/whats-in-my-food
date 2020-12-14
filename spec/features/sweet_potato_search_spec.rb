@@ -18,7 +18,7 @@ describe 'As a User' do
       click_on 'Search'
     end
     it 'has a list of results from the search with a total number of items' do
-
+      
       expect(page).to have_css('#counter')
     end
 
