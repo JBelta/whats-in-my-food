@@ -19,23 +19,23 @@ describe 'As a User' do
     end
     it 'has a list of results from the search with a total number of items' do
 
-      expect(page).to have_css('counter')
+      expect(page).to have_css('#counter')
     end
 
     it 'Has the GTIN/UPC for each food item' do
-      expect(page).to have_css('GTIN-code')
+      expect(page).to have_css('#GTIN-code')
     end
 
     it 'Has the description for each food item' do
-      expect(page).to have_css('description')
+      expect(page).to have_css('#description')
     end
 
     it 'Has the Brand Owner for each food item' do
-      expect(page).to have_css('brand')
+      expect(page).to have_css('#brand')
     end
 
     it 'Has the GTIN/UPC for each food item' do
-      expect(page).to have_css('ingreedients')
+      expect(page).to have_css('#ingredients')
     end
   end
 end
