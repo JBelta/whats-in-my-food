@@ -2,20 +2,20 @@ require 'rails_helper'
 
 describe 'As a User' do
   describe 'When I visit /' do
-    it 'Has a form that can be filled in and a button to redirect to the /food path' do
+    it 'Has a form that can be filled in and a button to redirect to the /foods path' do
       visit root_path
 
       fill_in :q, with: 'Sweet Potato'
 
-      click_on 'Submit'
-      expect(current_path).to eq(food_path)
+      click_on 'Search'
+      expect(current_path).to eq(foods_path)
     end
   end
   describe 'When redirected to /foods' do
     before :each do
       visit root_path
       fill_in :q, with: 'Sweet Potato'
-      click_on 'Submit'
+      click_on 'Search'
     end
     it 'has a list of results from the search with a total number of items' do
 
