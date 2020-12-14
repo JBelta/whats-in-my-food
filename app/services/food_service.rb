@@ -1,5 +1,9 @@
 class FoodService
 
+  def self.food(ingredient)
+    response = conn.get('/v1/foods/search') do |req|
+      req.params[:query] = ingredient
+  end
 
   private
 
@@ -7,5 +11,5 @@ class FoodService
     Faraday.new('https://api.nal.usda.gov/fdc') do |f|
       f.headers['x-api-key'] = ENV['USDA_API_KEY']
     end
-  end 
+  end
 end
