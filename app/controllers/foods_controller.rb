@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
 
   def index
-  end 
+   @foods = SearchFacade.food('sweet potato')
+  end
 end
